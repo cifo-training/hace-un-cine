@@ -1,0 +1,27 @@
+.header {
+  background: url('https://www.europapark.de/sites/default/files/field_hero_slideshow/movie/europa-park_magic-cinema3.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0 -200px;
+  background-attachment: fixed;
+  height: 30vh;
+  position: relative;
+  h2 {
+    color: #fff;
+    z-index: 100;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    font-weight: 700;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+    opacity: .7;
+    z-index: 1;
+  }
+}
