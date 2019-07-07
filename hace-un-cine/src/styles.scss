@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700&display=swap');
+@import '../node_modules/material-colors/dist/colors.scss';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-movie {
+  background: $md-red-600;
+  color: #fff;
+  border: 1px solid $md-red-700;
+  font-weight: 500;
+    &:hover {
+      background: $md-red-800;
+      border: 1px solid $md-red-800;
+      color: #fff;
+    }
+}
+
+.card {
+  box-shadow: 0 0 3px $md-grey-200;
+}
+
+.bgList1 {
+  background: $md-grey-50;
+}

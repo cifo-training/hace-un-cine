@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let movie of movies">
+      <div class="card">
+        <img class="card-img-top" src="{{movie.poster}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Sala #{{movie.room}}</h5>
+          <p class="card-text">{{movie.title}}</p>
+          <a [routerLink]="['/movie', movie.id]" class="btn btn-sm btn-movie"><strong>Ver película</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
