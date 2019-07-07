@@ -1,0 +1,49 @@
+<ng-container>
+<div class="content">
+  <figure>
+    <img src={{film.poster}} alt="" srcset="">
+  </figure>
+  <section class="data">
+<div class="title">
+  <h5>Room {{film.id}}</h5>
+  <h4>{{film.title}}</h4>
+</div>
+    <div class="data-item">
+      <label for="genres">Genres</label>
+      <div id="genres">
+        <div *ngFor='let genre of film.genres'>
+          {{genre}}
+        </div>
+      </div>
+    </div>
+    <div class="data-item">
+      <label for="year">Year</label>
+      <div id="year">
+        {{film.year}}
+      </div>
+    </div>
+    <div class="data-item">
+      <label for="director">Director</label>
+      <div id="director">
+        {{film.director}}
+      </div>
+    </div>
+    <div class="data-item">
+      <label for="actors">Actors</label>
+      <div id="actors">
+        <div *ngFor='let actor of film.actors'>
+          {{actor}}
+        </div>
+      </div>
+    </div>
+    <div class="synopsis">
+      <label for="synopsis">Synopsis</label>
+      <div id="synopsis">
+        {{film.synopsis}}
+      </div>
+    </div>
+  </section>
+
+</div>
+<p> <a routerLink='/home' class="btn back">Back</a></p>
+</ng-container>

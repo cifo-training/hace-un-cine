@@ -1,0 +1,11 @@
+<section class="mainContent">
+
+<div *ngFor='let film of films' class="list-group">
+  <a routerLink='/movie/{{film.id}}' class="list-group-item list-group-item-action">{{film.title}} <p>
+      {{ film.year }}
+    </p>
+  <img src={{film.poster}} class="poster-image" alt={{film.poster}}>
+</a>
+
+</div>
+</section>

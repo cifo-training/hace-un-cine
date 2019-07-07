@@ -1,0 +1,18 @@
+@font-face{
+	font-family: Take-Two;
+  src: url(../../../assets/fonts/take_two_bf-webfont.woff2);
+}
+
+header{
+  text-align: center;
+  .jumbotron{
+    background-image: url("../../../assets/images/film.jpg"), url("../../../assets/images/film-header1.jpg");
+    background-position: right, left top;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    font-family: Take-Two;
+    font-size: 65px;
+    text-shadow: 0 3px 0px #e9ecef,-3px 0 0px #e9ecef,3px 0 0px #e9ecef,0px -3px 0px #e9ecef;
+    padding: 3rem 2rem;
+  }
+}
