@@ -1,0 +1,27 @@
+<div class="fluid-container" style="text-align:center">
+  <h1>CINEMA</h1>
+    <h2>Room {{datopeli.getMovie(2).id}}</h2>
+    <h3><strong>{{datopeli.getMovie(2).title}}</strong></h3>
+  <hr/>
+  <div class="row">
+    <div class="module peli col-sm-6">
+      <span class="poster"><img width="60%" src="{{datopeli.getMovie(2).poster}}"/></span>
+    </div>
+    <div class="module peli col-sm-6 text-left">
+      <p><span class="col-sm-3 text-left"><strong>Genres</strong></span><span class="col-sm-3 genrs" *ngFor='let gen of datopeli.getMovie(2).genres'>{{gen}}</span></p>
+
+      <p><span class="col-sm-3 text-left"><strong>Year</strong></span><span class="col-sm-3 year">{{datopeli.getMovie(2).year}}</span></p>
+      <p><span class="col-sm-3 text-left"><strong>Director</strong></span><span class="col-sm-3 dire"><i>{{datopeli.getMovie(2).director}}</i></span></p>
+
+
+      <p><span class="col-sm-3 text-left"><strong>Actors</strong></span><span class="col-sm-3 actrs" *ngFor='let actor of datopeli.getMovie(2).actors'><p class="listact" >{{actor}}</p></span>
+      <p><span class="col-sm-3 text-left"><strong>Schedule</strong></span><span class="col-sm-3 hours" *ngFor='let hour of datopeli.getMovie(2).hours'><p class="listhour" >{{hour}}</p></span>
+      <p><span class="col-sm-3 text-left"><strong>Synopsis</strong></span><span class="col-sm-3 synops">{{datopeli.getMovie(2).synopsis}}</span></p>
+      <button class="btn-primary" routerLink="/home">Home</button>
+    </div>
+
+
+
+  </div>
+</div>
+
