@@ -4,7 +4,7 @@ import { Movie } from '../shared/interfaces/movie';
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesService {
+export class CinemaService {
   public movies: Movie[];
 
   constructor() {
@@ -34,7 +34,7 @@ export class MoviesService {
           'Saturday 15:45, 19:45, 22:45',
           'Sunday 15:45, 19:45, 22:45'
         ],
-        room: 1
+        room: 'Sala1'
       }, {
         id: 2,
         title: 'The Godfather',
@@ -60,7 +60,7 @@ export class MoviesService {
           'Saturday 15:40, 18:00, 20:40, 23:20',
           'Sunday 15:40, 18:00, 20:40, 23:20'
         ],
-        room: 2
+        room: 'Sala2'
       }, {
         id: 3,
         title: 'The Godfather Part II',
@@ -86,7 +86,7 @@ export class MoviesService {
           'Saturday 15:40, 18:00, 20:40, 23:20',
           'Sunday 15:40, 18:00, 20:40, 23:20'
         ],
-        room: 3
+        room: 'Sala3'
       }, {
         id: 4,
         title: 'The Dark Knight',
@@ -112,8 +112,8 @@ export class MoviesService {
           'Saturday 15:20, 17:20, 19:20, 21:20, 23:20',
           'Sunday 15:20, 17:20, 19:20, 21:20, 23:20'
         ],
-        room: 4
-      }, 
+        room: 'Sala4'
+      },
       {
         id: 5,
         title: 'Schindler\'s List',
@@ -139,7 +139,7 @@ export class MoviesService {
           'Saturday 15:40, 18:00, 20:40, 23:20',
           'Sunday 15:40, 18:00, 20:40, 23:20'
         ],
-        room: 5
+        room: 'Sala5'
       }
     ];
   }

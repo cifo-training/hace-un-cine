@@ -8,5 +8,5 @@ export interface Movie {
     director: string;
     actors: Array<string>;
     hours: Array<string>;
-    room: number;
+    room: string;
 }
