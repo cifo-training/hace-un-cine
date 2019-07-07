@@ -1,11 +1,11 @@
-<h2>Peliculas</h2>
+<h2>Movies</h2>
 
 <div class='container'>
     <ng-container *ngFor="let sala of salas">
       <div class="sala" [id]="sala.room">
         <a routerLink='../movie/{{ sala.id }}'>
           <figure>
-              <p>Sala {{sala.id}}</p>
+              <p>Room {{sala.id}}</p>
               <img class="imagenes" src={{sala.poster}}>
               <figcaption>{{sala.title}}</figcaption>
           </figure>

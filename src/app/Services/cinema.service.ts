@@ -34,7 +34,7 @@ export class CinemaService {
           'Saturday 15:45, 19:45, 22:45',
           'Sunday 15:45, 19:45, 22:45'
         ],
-        room: 'Sala1'
+        room: 'Room1'
       }, {
         id: 2,
         title: 'The Godfather',
@@ -60,7 +60,7 @@ export class CinemaService {
           'Saturday 15:40, 18:00, 20:40, 23:20',
           'Sunday 15:40, 18:00, 20:40, 23:20'
         ],
-        room: 'Sala2'
+        room: 'Room2'
       }, {
         id: 3,
         title: 'The Godfather Part II',
@@ -86,7 +86,7 @@ export class CinemaService {
           'Saturday 15:40, 18:00, 20:40, 23:20',
           'Sunday 15:40, 18:00, 20:40, 23:20'
         ],
-        room: 'Sala3'
+        room: 'Room3'
       }, {
         id: 4,
         title: 'The Dark Knight',
@@ -112,7 +112,7 @@ export class CinemaService {
           'Saturday 15:20, 17:20, 19:20, 21:20, 23:20',
           'Sunday 15:20, 17:20, 19:20, 21:20, 23:20'
         ],
-        room: 'Sala4'
+        room: 'Room4'
       },
       {
         id: 5,
@@ -139,7 +139,7 @@ export class CinemaService {
           'Saturday 15:40, 18:00, 20:40, 23:20',
           'Sunday 15:40, 18:00, 20:40, 23:20'
         ],
-        room: 'Sala5'
+        room: 'Room5'
       }
     ];
   }
@@ -152,7 +152,7 @@ export class CinemaService {
 
   getMovie(id: number) {
     // Recibe un id de película como parámetro y devuelve el objeto correspondiente.
-    return this.movies[id];
+    return this.movies[id - 1];
   }
 
 }
