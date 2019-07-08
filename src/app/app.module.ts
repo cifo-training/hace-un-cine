@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MoviesServiceService} from './services/movies-service.service';
+import {MoviesService} from './services/movies-service.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,7 @@ import { MyMovieComponent } from './my-movie/my-movie.component';
     AppRoutingModule
   ],
   providers: [
-    MoviesServiceService
+    MoviesService
   ],
   bootstrap: [AppComponent]
 })

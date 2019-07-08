@@ -1,6 +1,19 @@
-import Movie from '../interfaces/movies.interfaces';
 
-const movies: Array<Movie> =[
+export class Movie {
+  id: number;
+  title: string;
+  poster: string;
+  synopsis: string;
+  genres: Array<string>;
+  year: number;
+  director: string;
+  actors: Array<string>;
+  hours: Array<string>;
+  room: number;
+}
+
+
+const movies: Array<any> =[
   {
     id: 1,
     title: "The Shawshank Redemption",
@@ -95,4 +108,4 @@ const movies: Array<Movie> =[
   }
 ]
 
-export default movies;
+export {movies};

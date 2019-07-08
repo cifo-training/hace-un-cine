@@ -1,25 +1,32 @@
 import { Injectable } from '@angular/core';
-import {movies} from '../shared/data/data';
+import {Movie, movies} from '../shared/data/data';
 
 @Injectable({
   providedIn: 'root'
 })
 
-function getMovies() { //Devuelve un array de todas las películas.
+export class MoviesService {
+  movies: Array<Movie> = movies;
 
-return movies;
+getMovies() { //Devuelve un array de todas las películas.
 
-
-}
-
-function getMovie()  { //Recibe un id de película como parámetro y devuelve el objeto correspondiente.
-
-const id = movies[0];
-
-return id;
+return this.movies;
 
 
 }
+
+getMovie(id: string)  { //Recibe un id de película como parámetro y devuelve el objeto correspondiente.
+
+  let movieItem: Movie;
+
+  this.movies.forEach((singleMovie) => {
+    if (singleMovie.id === Number(id)) {
+      movieItem = singleMovie;
+    }
+  });
+  return movieItem;
+}
+
 
 
 export class MoviesServiceService {
