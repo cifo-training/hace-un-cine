@@ -2,32 +2,22 @@
 <div class="jumbotron bg-warning">
   <h1 class="display-1 text-weight text-center">All Movies</h1>
 </div>
-<!-- <div class="container mb-5">
-<div class="row justify-content-md-center">
-  <div class="col-md-12">
-    <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let movie of movies">
-        <a [routerLink]="['/movie', movie.id]">
-          <h3 class="text-center mt-3 bg-warning text-light p-2">ROOM {{movie.room}}</h3>
-          <img class="img-fluid mx-auto" [src]="movie.poster" alt="{{movie.title}}">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->
 
-<div class="fondo-blur">
-<div class="container-flex" *ngFor="let movie of movies">
-    <a [routerLink]="['/movie', movie.id]">
-  <div class="row justify-content-md-center">
-      <div class="col-md-3">
-          <div class="panel panel-default flex-col">
-              <div class="panel-heading"><h3 class="text-center mt-3 bg-warning text-light p-2">ROOM {{movie.room}}</h3></div>
-              <img class="img-fluid mx-auto" [src]="movie.poster" alt="{{movie.title}}">
-              <div class="panel-footer text-white">{{movie.synopsis}}</div>
+<div class="fondo">
+    <div class="container-flex" *ngFor="let movie of movies">
+        <a [routerLink]="['/movie', movie.id]">
+      <div class="row justify-content-md-center">
+          <div class="col-md-3">
+              <div class="row">
+              <div class="panel panel-default flex-col">
+                  <div class="panel-heading"><h3 class="text-center mt-3 bg-warning text-light p-2">ROOM {{movie.room}}</h3></div>
+                  <img class="img-fluid mx-auto" [src]="movie.poster" alt="{{movie.title}}">
+                  <div class="panel-footer text-white">{{movie.synopsis}}</div>
+              </div>
           </div>
+        </div>
       </div>
-    </div>
+
+
 
 
