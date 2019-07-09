@@ -17,6 +17,7 @@
 </div>
 </div> -->
 
+<div class="fondo-blur">
 <div class="container-flex" *ngFor="let movie of movies">
     <a [routerLink]="['/movie', movie.id]">
   <div class="row justify-content-md-center">
@@ -27,3 +28,6 @@
               <div class="panel-footer text-white">{{movie.synopsis}}</div>
           </div>
       </div>
+    </div>
+
+
