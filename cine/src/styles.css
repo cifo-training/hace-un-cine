@@ -1,0 +1,13 @@
+.jumbotron{
+  border-radius: 0;
+  height: 15vh; 
+}
+
+.content{
+  background-image: url("../src/assets/img/cinema.jpg");
+  height: 85vh;
+}
+
+.pointer{
+  cursor: pointer;
+}
