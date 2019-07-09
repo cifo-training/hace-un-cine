@@ -4,20 +4,15 @@
 </div>
 
 <div class="fondo">
-    <div class="container-flex" *ngFor="let movie of movies">
+<div class="d-flex justify-content-around ">
+    <div class="container" *ngFor="let movie of movies">
         <a [routerLink]="['/movie', movie.id]">
-      <div class="row justify-content-md-center">
-          <div class="col-md-3">
-              <div class="row">
-              <div class="panel panel-default flex-col">
-                  <div class="panel-heading"><h3 class="text-center mt-3 bg-warning text-light p-2">ROOM {{movie.room}}</h3></div>
-                  <img class="img-fluid mx-auto" [src]="movie.poster" alt="{{movie.title}}">
-                  <div class="panel-footer text-white">{{movie.synopsis}}</div>
-              </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="text-center mt-3 bg-warning text-light p-2">ROOM {{movie.room}}</div>
+    <img class="img-fluid mx-auto" [src]="movie.poster" alt="{{movie.title}}">
+    <div class="panel-footer text-white">{{movie.synopsis}}</div>
+        </a>
+  </div>
+</div>
 
 
 
