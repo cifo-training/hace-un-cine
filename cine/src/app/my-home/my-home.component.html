@@ -1,10 +1,16 @@
-<div class="card-columns bg-dark p-5">
-  <div [routerLink]="[movie.id]" routerLinkActive="router-link-active"  *ngFor="let movie of movies" class="card pointer">
-    <img [src]="movie.poster" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{movie.title}}</h5>
-      <p class="card-text">{{movie.synopsis}}</p>
+<div class="content container-fluid p-5">
+  <div class="card-deck col-md-10 mx-auto bg-transparent">
+    <div
+      [routerLink]="[movie.id]"
+      routerLinkActive="router-link-active"
+      *ngFor="let movie of movies"
+      class="card pointer"
+    >
+      <img [src]="movie.poster" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <p class="card-text">{{ movie.synopsis }}</p>
+      </div>
     </div>
   </div>
 </div>
-
