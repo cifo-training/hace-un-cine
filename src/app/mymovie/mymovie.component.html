@@ -1,1 +1,68 @@
-<p>mymovie works!</p>
+
+
+<div class="fondo">
+<div class="container mb-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="bg-warning">
+          <h2 class="text-center text-light p-3">Room {{movie.room}}</h2>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="my-5">
+          <h1 class="text-light display-4">{{movie.title}}</h1>
+          <hr>
+          <div class="row">
+            <div class="col-md-4">
+              <img [src]="movie.poster" class="text-light img-fluid mb-2" alt="{{movie.title}}">
+              <div class="bg-warning text-light text-center p-3">
+                <h3 class="text-light"><strong>Schedule</strong></h3>
+                <ul>
+                  <li *ngFor="let hours of movie.hours">
+                    <h5>{{hours}}</h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div>
+                <h3 class="text-light"><strong>Synopsis</strong></h3>
+                <h5 class="text-justify text-light">{{movie.synopsis}}</h5>
+              </div>
+              <div>
+                <h3 class="text-light"><strong>Director</strong></h3>
+                <h5 class="text-light">{{movie.director}}</h5>
+              </div>
+              <div>
+                <h3 class="text-light"><strong>Actors</strong></h3>
+                <h5>
+                  <ul class="text-light">
+                    <li *ngFor="let actors of movie.actors">{{actors}}</li>
+                  </ul>
+                </h5>
+              </div>
+              <div>
+                <h3 class="text-light"><strong>Year</strong></h3>
+                <h5 class="text-light">{{movie.year}}</h5>
+              </div>
+              <div>
+                <h3 class="text-light"><strong>Genres</strong></h3>
+                <ul class="text-light">
+                  <li *ngFor="let genre of movie.genres">
+                    <h5>{{genre}}</h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-info bg-warning float-right rounded-0" routerLink='/myhome'>Home</a>
+  </div>
+</div>
+
+</div>
+
+</div>
+
