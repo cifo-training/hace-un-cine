@@ -1,0 +1,21 @@
+
+
+<div class="container p-5">
+
+<div class=" bg-dark p-5">
+    <div class= ''>
+  <div class= "container  p-2 lienzo ">
+  <div class="row">
+    <div class="card col m-1" *ngFor="let movie of movies"  (click)="onClickGoToMovieComponent(movie.id)" >
+      <h6 class="text-center">ROOM {{movie.room }}</h6>
+      <img class="card-img-top" width='200' height='250' [src]="movie.poster" alt="Card image cap">
+      <small class="text-center">{{movie.title | uppercase}}</small>
+      <div class="card-body">
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+</div>
