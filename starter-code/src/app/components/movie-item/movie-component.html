@@ -1,0 +1,75 @@
+<div class=" p-3 container bg-dark text-white">
+
+    <small class="mr-3">ROOM {{movieToShow.room}}</small>
+
+   <h3 class=" text-center">{{movieToShow.title | uppercase}}</h3>
+  <div class="row pt-2">
+    <div class="col-4">
+      <img [src]="movieToShow.poster" [alt]="movieToShow.title" style="width:100%;">
+      <button class="btn btn-warning btn-block mt-3" (click)="goBack()">Volver</button>
+    </div>
+
+    <div class="col-8">
+      <div class="row pt-2">
+        <div class="col 2">
+            <span> Genres:</span>
+        </div>
+        <div class="col-10">
+          <ul>
+            <li *ngFor="let item of movieToShow.genres" class="">
+              {{item}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col 2">
+            <span> Year:</span>
+        </div>
+        <div class="col-10">
+            <span>{{movieToShow.year}}</span>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col 2">
+            <span> Director:</span>
+        </div>
+        <div class="col-10">
+            <span>{{movieToShow.director}}</span>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col 2">
+            <span>  Actors:</span>
+        </div>
+        <div class="col-10">
+          <ul class="list-group list-group-flush ">
+            <li *ngFor="let actor of movieToShow.actors" class="list-group-item bg-dark text-white">
+              {{actor}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col 2">
+            <span> Horarios:</span>
+        </div>
+        <div class="col-10">
+          <ul>
+            <li *ngFor="let hour of movieToShow.hours">
+                <span>{{hour}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col 2">
+         <span>Sinopsis :</span>
+        </div>
+        <div class="col-10">
+        <span>{{movieToShow.synopsis}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
