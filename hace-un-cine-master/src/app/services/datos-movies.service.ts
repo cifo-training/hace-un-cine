@@ -130,16 +130,28 @@ export class DatosMoviesService {
     }
   ];
 
+
   constructor() { }
 
   getMovies() {
     return this.movies;
   }
 
-
-  getMovie(id: number) {
-    // const url = `${this.detail}/${id}`;
-    return this.movies[id];
+/*
+  getMovie$(id) {
+    //const url = `${this.detail}/${id}`;
+    //const ide = +this.route.snapshot.paramMap.get('id');
+    /*const ide = +this.route.snapshot.paramMap.get(`/${id}`);
+    return movie;
   }
+*/
+
+  getMovie(id) {
+    const movie = this.movies.find(e => {
+      return e.id == id;
+    });
+    return movie;
+  }
+
 
 }
