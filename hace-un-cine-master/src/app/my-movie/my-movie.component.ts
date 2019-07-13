@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 //import { Location } from '@angular/common';
 import { Movie } from '../shared/movie';
 import { DatosMoviesService } from '../services/datos-movies.service';
@@ -11,31 +11,31 @@ import { DatosMoviesService } from '../services/datos-movies.service';
 })
 export class MyMovieComponent implements OnInit {
 
-  movies: Movie[];
+  movie: Movie;
+  selectedMovie: any;
 
 
   constructor(private datopeli: DatosMoviesService,
-              //private route: ActivatedRoute,
+              private route: ActivatedRoute,
               //private location: Location
               ) { }
 
   ngOnInit() {
-    this.datopeli.getMovie(5);
+    /* NOK
+    this.route.params.subscribe(miParams => {this.selectedMovie = miParams.id; });
+    this.datopeli.getMovie$(this.selectedMovie);
+    */
+   this.selectedMovie = this.route.snapshot.params.id;
+    this.movie = this.datopeli.getMovie(this.selectedMovie);
   }
 
-  getMovie(id: number): void {
-    //const id = +this.route.snapshot.paramMap.get('id');
-    this.datopeli.getMovie(id);
+ /* getMovie$() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    return this.datopeli.getMovie(id);
 
-  }
-
-  getMovies(): void {
-    //const id = +this.route.snapshot.paramMap.get('id');
-    this.datopeli.getMovies();
-
-  }
-  /*
-  getMovies() {
-    this.datopeli.getMovies();
   }*/
+
+
+
+
 }
