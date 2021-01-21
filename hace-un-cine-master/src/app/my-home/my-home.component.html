@@ -1,0 +1,21 @@
+
+<div class="principal text-center">
+    <!--<img width="100%" alt="Principal img Cinema" src="../assets/img/prinpcine.jpg">-->
+
+<div class="col-sm-12 text-center">
+  <a *ngFor="let peli of datospelis.getMovies()" class="col-1-4"
+        routerLink="/detail/{{peli.id}}">
+      <div class="col-sm-4" style="float:left;padding:20px;">
+        <div class="bgpeli">
+          <h2 class="badge">Room {{peli.id}}</h2><hr/>
+        <span class="poster"><img width="30%" src="{{peli.poster}}"/></span>
+        <h4>{{peli.title}}</h4>
+      </div>
+      </div>
+  </a>
+</div>
+</div>
+
+
+
+
