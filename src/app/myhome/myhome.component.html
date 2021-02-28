@@ -1,0 +1,18 @@
+
+<div class="jumbotron bg-warning">
+  <h1 class="display-1 text-weight text-center">All Movies</h1>
+</div>
+
+<div class="fondo">
+<div class="d-flex justify-content-around ">
+    <div class="container" *ngFor="let movie of movies">
+        <a [routerLink]="['/movie', movie.id]">
+    <div class="text-center mt-3 bg-warning text-light p-2">ROOM {{movie.room}}</div>
+    <img class="img-fluid mx-auto" [src]="movie.poster" alt="{{movie.title}}">
+    <div class="panel-footer text-white">{{movie.synopsis}}</div>
+        </a>
+  </div>
+</div>
+
+
+
